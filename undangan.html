@@ -1,0 +1,542 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Undangan</title>
+    <style>
+        * {
+            margin: 0px;
+            padding: 0px;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        div.container {
+            min-width: 300px;
+            max-width: 500px;
+            margin: 0px auto;
+        }
+
+        section.page {
+            width: 100%;
+            min-height: 100vh;
+            background-color: salmon;
+            margin-bottom: 10px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            background-size: cover;
+            background-image: url(16.jpg);
+        }
+
+        p, h1 {
+            text-align: center;
+        }
+
+        section.page.one {
+            gap: 300pt;
+            background-size: cover;
+            background-image: url(11.jpg);
+        }
+
+        section.page.one > div > h1 {
+            /* text-align: center; */
+            font-size: 30pt;
+        }
+
+        section.page.one div.guest-name {
+            color: white;
+        }
+
+        section.page.two {
+            justify-content: space-evenly;
+            padding: 20px;
+        }
+
+        div.card {
+            padding: 10pt;
+            width: 250pt;
+            min-height: 300pt;
+            background-color: gainsboro;
+            border-radius: 50px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-evenly;
+            align-items: center;
+        }
+
+        div.circle-first {
+            width: 150pt;
+            height: 150pt;
+            border-radius: 75pt;
+            background-size: cover;
+            background-image: url(gurl.jpg);
+            background-color: greenyellow;
+            margin-bottom: 50px;
+        }
+
+        div.line {
+            width: 150pt;
+            height: 1px;
+            background-color: black;
+            margin: 10px auto;
+        }
+
+        section.page.three {
+            justify-content: space-evenly;
+            padding: 20px;
+        }
+
+        div.circle-second {
+            width: 150pt;
+            height: 150pt;
+            border-radius: 75pt;
+            background-size: cover;
+            background-image: url(nana.jpeg);
+            background-color: greenyellow;
+            margin-bottom: 50px;
+        }
+
+        section.page.four {
+            justify-content: space-evenly;
+            padding: 20px;
+        }
+
+        section.page.four div.doa {
+            text-align: center;
+        }
+
+        div.info-date {
+            width: 100%;
+            height: 110px;
+            /* background-color: aquamarine; */
+            /* color: white; */
+        }
+
+        section.page.four div.info-date div.time {
+            width: 100%;
+            height: 30px;
+            /* background-color: antiquewhite; */
+            display: flex;
+            flex-direction: row;
+            justify-content: space-evenly;
+            align-items: center;
+        }
+
+        section.page.four div.info-date div.date {
+            width: 100%;
+            height: 30px;
+            /* background-color: blueviolet; */
+            display: flex;
+            flex-direction: row;
+            justify-content: space-evenly;
+            align-items: center;
+        }
+
+        div.button {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            /* background-color: brown; */
+        }
+        
+        div.button span.button {
+            width:  200px;
+            height: 50px;
+            border-radius: 25px;
+            border: 1px gray solid;
+            background-color: rgba(220, 220, 220, 0.849);
+            text-align: center;
+            line-height: 50px;
+        }
+
+        div.button span.button > a {
+            text-decoration: none;
+            color: black;
+        }
+
+        section.page.five {
+            justify-content: space-evenly;
+            padding: 20px;
+        }
+
+        div.card-five {
+            padding: 10pt;
+            width: 300pt;
+            min-height: 400pt;
+            background-color: gainsboro;
+            border-radius: 50px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-evenly;
+            align-items: center;
+            gap: 20px;
+        }
+
+        div.top-part {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-evenly;
+            align-items: center;
+        }
+        
+        div.top-part div.img-first {
+            width: 90pt;
+            height: 90pt;
+            border-radius: 15pt;
+            background-size: cover;
+            background-image: url(https://i.pinimg.com/564x/88/97/cd/8897cdb0ec6121b039ad5b8a4e38fc88.jpg);
+            background-color: greenyellow;
+            margin-bottom: 5px;
+        }
+
+        div.top-part div.word {
+            width:  80%;
+            text-align: center;
+        }
+
+        div.top-part div.batas {
+            width: 100%;
+            height: 15px;
+            /* background-color: blue; */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 2px;
+        }
+
+        div.top-part span.box {
+            width: 90px;
+            height: 1px;
+            border: 1px black solid;
+            background-color: black;
+        }
+
+        div.top-part div.word > h4 {
+            font-weight: bold;
+        }
+
+        div.top-part div.button-two {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            /* background-color: brown; */
+        }
+        
+        div.top-part div.button-two span.button {
+            width:  150px;
+            height: 30px;
+            border-radius: 15px;
+            border: 1px gray solid;
+            background-color: rgba(220, 220, 220, 0.849);
+            text-align: center;
+            line-height: 30px;
+        }
+
+        div.top-part div.button-two span.button > a {
+            text-decoration: none;
+            color: black;
+        }
+
+        div.bottom-part {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-evenly;
+            align-items: center;
+        }
+        
+        div.bottom-part div.img-second {
+            width: 90pt;
+            height: 90pt;
+            border-radius: 15pt;
+            background-size: cover;
+            background-image: url(https://i.pinimg.com/564x/0f/b2/75/0fb275e90f35ac9fd1034884306e7969.jpg);
+            background-color: greenyellow;
+            margin-bottom: 5px;
+        }
+
+        div.bottom-part div.word {
+            width:  80%;
+            text-align: center;
+        }
+
+        div.bottom-part div.batas {
+            width: 100%;
+            height: 15px;
+            /* background-color: blue; */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 2px;
+        }
+
+        div.bottom-part span.box {
+            width: 90px;
+            height: 1px;
+            border: 1px black solid;
+            background-color: black;
+        }
+
+        div.bottom-part div.word > h4 {
+            font-weight: bold;
+        }
+
+        div.bottom-part div.button-two {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            /* background-color: brown; */
+        }
+        
+        div.bottom-part div.button-two span.button {
+            width:  150px;
+            height: 30px;
+            border-radius: 15px;
+            border: 1px gray solid;
+            background-color: rgba(220, 220, 220, 0.849);
+            text-align: center;
+            line-height: 30px;
+        }
+
+        div.bottom-part div.button-two span.button > a {
+            text-decoration: none;
+            color: black;
+        }
+        
+        .satu {grid-area: satu;}
+        .dua {grid-area: dua;}
+        .tiga {grid-area: tiga;}
+        .empat {grid-area: empat;}
+        .lima {grid-area: lima;}
+
+        section.page.six {
+            justify-content: space-evenly;
+            padding: 20px;
+        }
+        
+        .wadah {
+            width: 500px;
+            height: 700px;
+            display: grid;
+            grid-template-areas: 
+            'satu satu satu satu'
+            'dua dua tiga tiga'
+            'empat empat lima lima';
+            gap: 10px;
+            /* background-color: blanchedalmond; */
+            padding: 10px;
+        }
+        
+        .wadah > div {
+            background-color: rgba(220, 220, 220, 0.849);
+            border: 1px rgba(169, 168, 168, 0.849) solid;
+            text-align: center;
+            padding: 5px;
+            font-size: 20px;
+            border-radius: 10px;
+            line-height: 30px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-evenly;
+            align-items: center;
+        }
+
+        .foto {
+            width: 90px;
+            height: 90px;
+            background-size: cover;
+            align-items: center;
+        }
+
+        section.page.seven {
+            justify-content: space-evenly;
+            padding: 20px;
+        }
+
+        section.page.seven {
+            gap: 300pt;
+            background-size: cover;
+            background-image: url(11.jpg);
+        }
+
+        section.page.seven > div > h1 {
+            text-align: center;
+            font-size: 30pt;
+        }
+
+        .Credit > p {
+            color: white;
+        }
+
+        .logo {
+            width: 50pt;
+            height: 50pt;
+            border-radius: 75pt;
+            background-size: cover;
+            background-image: url(flower.jpg);
+            background-color: greenyellow;
+            margin-bottom: 50px;
+            margin: 0px auto;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <section class="page one">
+            <div class="title">
+                <p>The Wedding of</p>
+                <h1>Yuii & Nana</h1>
+                <p>Minggu, 17 September 2023</p>
+            </div>
+
+            <div class="guest-name">
+                <p>Kepada Yth.</p>
+                <p>Anak-anak bujangan encete</p>
+            </div>
+        </section>
+        <section class="page two">
+            <h2>The Beloved</h2>
+            <h1>Yuii & Nana</h1>
+            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Earum sunt eos doloribus pariatur maxime! Repudiandae accusantium officiis ullam ex deserunt, sequi, quidem quasi laborum consequuntur, voluptatum ratione voluptatem numquam sed.</p>
+            <div class="card">
+                <div class="circle-first"></div>
+                <h1>Yui Yufler</h1>
+                <div class="line"></div>
+                <p>Putri Ketiga</p>
+                <p>Bapak papa</p>
+                <p>&</p>
+                <p>Ibu mama</p>
+            </div>
+        </section>
+        <section class="page three">
+            <h2>The Beloved</h2>
+            <h1>Yuii & Nana</h1>
+            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Earum sunt eos doloribus pariatur maxime! Repudiandae accusantium officiis ullam ex deserunt, sequi, quidem quasi laborum consequuntur, voluptatum ratione voluptatem numquam sed.</p>
+            <div class="card">
+                <div class="circle-second"></div>
+                <h1>Nana Nayangi</h1>
+                <div class="line"></div>
+                <p>Putra Tunggal</p>
+                <p>Bapak Esem</p>
+                <p>&</p>
+                <p>Ibu Ensitik</p>
+            </div>
+        </section>
+        <section class="page four">
+            <div class="heading">
+                <h1>Doa Pernikahan</h1>
+            </div>
+            <div class="doa">
+                <p>"Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit debitis, voluptates repudiandae vero quod veniam labore minus eveniet provident velit. Beatae cumque doloremque, cupiditate at, numquam itaque ratione, accusantium magni earum aperiam quasi officiis quae."</p>
+                <h3>Lorem ipsum dolor sit.</h3>
+            </div>
+            <div class="info-date">
+                <div class="time">
+                    <h4 class="one">0</h4>
+                    <h4 class="two">0</h4>
+                    <h4 class="three">0</h4>
+                    <h4 class="four">0</h4>
+                </div>
+                <div class="date">
+                    <p>Hari</p>
+                    <p>Jam</p>
+                    <p>Menit</p>
+                    <p>Detik</p>
+                </div>
+                <div class="button">
+                    <span class="button">
+                        <a href="#">📆Save The Date</a>
+                    </span>
+                </div>
+            </div>
+        </section>
+        <section class="page five">
+            <div class="card-five">
+                <div class="top-part">
+                    <div class="img-first"></div>
+                    <div class="word">
+                        <h2>Akad</h2>
+                        <h4>Minggu, 17 September 2023
+                            07.30 WIB s/d Selesai</h4>
+                        <div class="batas">
+                            <span class="box"></span><span class="point">📍</span><span class="box"></span>
+                        </div>
+                        <h4>Tempat</h4>
+                        <p>Temple The Heavenly State</p>
+                    </div>
+                    <div class="button-two">
+                        <span class="button">
+                            <a href="#">📍Open Maps</a>
+                        </span>
+                    </div>
+                </div>
+                <div class="bottom-part">
+                    <div class="img-second"></div>
+                    <div class="word">
+                        <h2>Resepsi</h2>
+                        <h4>Minggu, 17 September 2023
+                            07.30 WIB s/d Selesai</h4>
+                        <div class="batas">
+                            <span class="box"></span><span class="point">📍</span><span class="box"></span>
+                        </div>
+                        <h4>Tempat</h4>
+                        <p>Ballroom The SMKwangya</p>
+                    </div>
+                    <div class="button-two">
+                        <span class="button">
+                            <a href="#">📍Open Maps</a>
+                        </span>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="page six">
+            <div class="wadah">
+                <div class="satu">
+                    <h1>Protokol Kesehatan</h1>
+                    <p>Penting bagi kami agar semua orang tetap aman, harap baca dengan seksama Panduan Covid-19 Hari Pernikahan kami sebelum menghadiri acara :</p>
+                </div>
+                <div class="dua">
+                    <p>Menggunakan Masker</p>
+                    <div class="foto" style="background-image: url(https://i.pinimg.com/236x/c4/dd/9c/c4dd9ce68ceb7e94afcf774048564ee7.jpg);"></div>
+                    <p>Harus menggunakan masker selama acara.</p>
+                </div>
+                <div class="tiga">
+                    <p>Mencuci Tangan</p>
+                    <div class="foto" style="background-image: url(https://i.pinimg.com/564x/77/3b/d2/773bd2c9e51dd530f7bf6b5e98c8791c.jpg);"></div>
+                    <p>Cuci Tangan Sebelum Masuk Lokasi Acara</p>
+                </div>
+                <div class="empat">
+                    <p>Menjaga Jarak</p>
+                    <div class="foto" style="background-image: url(https://i.pinimg.com/564x/28/2d/d1/282dd128b7787cd07c77c5a5a1cc94d7.jpg);"></div>
+                    <p>Menjaga Jarak dengan Orang Lain</p>
+                </div>
+                <div class="lima">
+                    <p>Mengukur Suhu</p>
+                    <div class="foto" style="background-image: url(https://i.pinimg.com/736x/98/3f/7a/983f7a51e3edd6817174b7cad1ed3287.jpg);"></div>
+                    <p>Mengukur Suhu Tubuh Sebelum Masuk</p>
+                </div>
+            </div>
+        </section>
+        <section class="page seven">
+            <div class="End">
+                <p>Thank You</p>
+                <h1>Yuii & Nana</h1>
+            </div>
+
+            <div class="Credit">
+                <p>Template Created by Jiplakan VSCode</p>
+                <p>Hubungi WA : 08**-473*-62*1</p>
+                <p>Instagram : VSCodeJiplak</p>
+
+                <div class="logo"></div>
+            </div>
+        </section>
+    </div>
+</body>
+</html>
